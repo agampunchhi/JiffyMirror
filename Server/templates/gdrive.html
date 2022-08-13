@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/gdrive.css">
+</head>
+<body>
+    <div class="mirrorBg"><h1>PELL&nbsp/&nbsp</h1><h1 class="mirror" id="mirrorTxt">MIRROR</h1></div>
+    {% if session.authorised %}
+    <form method="GET" action="/mirror">
+        <div><button type="submit" class="button" id="useExisting">Use Previously Linked Drive</button></div>
+    </form>
+    {% endif %}
+    <form method="GET" action='/auth'>
+        <div><button type="submit" class="button" id="authLinkOpen">Link Drive</button></div>
+    </form>
+</body>
+</html>

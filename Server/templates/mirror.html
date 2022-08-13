@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/mirror.css">
+</head>
+<body>
+    <form method="GET" action="/status">
+        <button type="submit" class ="statusBttn" id="statusBttn">STATUS</button>
+    </form>
+    <div class="mirrorBg"><h1>PELL&nbsp/&nbsp</h1><h1 class="mirror" id="mirrorTxt">MIRROR</h1></div>
+    <form method="POST" action="/mirror">
+        <div><input type="text" class="numField" name='link' id="link" placeholder="ENTER LINK/MAGNET"></div>
+        <div><input type="text" class="numField" name='folderID' id="folderID" placeholder="OPTIONAL: FOLDER ID"></div>
+        <div><button type='submit' class="dwnLoadBttn" id="sendLink">DOWNLOAD TO DRIVE</button></div>
+        </form>
+    {% for message in get_flashed_messages() %}
+        <div class="dwnLoadBttn">{{ message }}</div>
+    {% endfor %}
+    <form method='GET' action='/logout'>
+        <button id="emailShow" class="logoutBttn">LOGOUT</button>
+    </form>
+    <script>
+        var logout = document.getElementById("emailShow");
+        logout.addEventListener("mouseover", function(){
+            logout.innerHTML = "{{ session.email }}";
+        });
+        logout.addEventListener("mouseout", function(){
+            logout.innerHTML = "LOGOUT";
+        });
+        var folderID = document.getElementById("folderID");
+        folderID.value = "{{ session.folderID }}";
+    </script>
+</body>
+</html>

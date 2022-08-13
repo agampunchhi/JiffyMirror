@@ -1,0 +1,10 @@
+psycopg2-binary
+flask
+flask_session
+requests
+aria2p
+aiohttp
+eventlet
+pydrive
+gunicorn
+httplib2<=0.15.0

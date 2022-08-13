@@ -1,0 +1,24 @@
+html {
+    height: 350px;
+    width: 350px;
+    padding: auto;
+    margin: auto;
+    background: #fffde6;
+    align-content: center;
+}
+
+div {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    background-color: #fffde6;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+}

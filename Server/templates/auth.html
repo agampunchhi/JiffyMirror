@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+    <div class="mirrorBg"><h1>PELL&nbsp/&nbsp</h1><h1 class="mirror" id="mirrorTxt">MIRROR</h1></div>
+    <div><a target="_blank" href='{{ authLink }}' class="authBttn">Open Auth Link</a></div>
+    <form method="POST" action="/authorise">
+        <div><input type="text" class="numField" id="authCode" name="authCode" placeholder="PASTE AUTH CODE HERE"></div>
+        <div><button type="submit" class="authBttn" id="auth">SUBMIT</button></div>
+    </form>
+    </div>
+</body>
+</html>
